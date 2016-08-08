@@ -1,0 +1,256 @@
+/*主导航css*/
+    
+body{
+    /*font-size: 1em;*/
+    padding: 0px;
+    margin: 0px;
+    font-family: "Microsoft YaHei",Serif;
+    /*width:480px;
+    height: 800px;*/
+    font-size: 62.5%;
+    /*position: absolute;
+    left:50%;
+    margin-left: -240px;*/
+ }
+
+
+  ul.nav {
+    line-height: 2em;
+    text-align: center;
+}
+.nav-pills>li>a{
+    font-size: 2.5em;
+}
+.nav-pills>li+li {
+    margin-left: 0;
+}
+.nav-pills>li{
+    width: 33.3%;
+}
+
+
+  img{
+    border-radius: 0.2em;
+  }
+   .abstract{
+        margin: 4.6em auto 0em;
+        /*padding:2em 0em 0em;*/
+   }
+   #img_detail{
+        margin:2em auto 0em 3em;
+        text-align: center;
+   }
+   #img_detail img{
+    width: 100%;
+   }
+
+   .col-xs-8{
+    /*margin:0em auto auto 2em;*/
+   }
+
+   #name{
+        /*margin-left: 1em;*/
+        margin-top:0.6em;
+        font-size: 6em;
+        color: #FF9D00;
+        display: inline-block;
+   }
+    #introDetail p{
+        margin: 1.5em 1.4em 0em -8em;
+        /*color: #FF9D00;*/
+        font-size: 2.1em;
+   }
+   
+   #myScrollspy{
+    width:20%;
+    font-size: 1.8em;
+   }
+   #details{
+    /*font-size: 2em;*/
+        margin-left: 1em;
+    padding-left: 0.5em;
+   }
+
+   #section-1, #section-2,#section-3,#section-4{
+        margin:0.5em 0em;
+        color: #FF9D00;
+    }
+    .col-xs-7,.col-xs-4{
+      color:#333;
+      font-size: 0.8em;
+      margin-bottom: 0.5em;
+    }
+
+
+
+    /*景点区设置*/
+    .attrDetail{
+        margin: 0.5em auto;
+        /*font-size: 0.8em;*/
+    }
+    .col-xs-7 h2{
+      /*font-size: 1.2em;*/
+          margin-top: 0em;
+    }
+    .col-xs-7 p{
+      font-size: 0.6em;
+          margin-top: 0em;
+    }
+    /*对图片区域设置宽度占行的百分比，对图片设置宽度为100%填充*/
+    .img_attr{
+        /*width:36%;*/
+    }
+    .text_attr{
+        margin: auto auto auto -1.5em;
+    }
+/*美食区设置*/
+.foodDetail{
+  text-align: center;
+  margin: 0.5em auto;
+}
+p.col-xs-4{
+  margin: 0.5em 0em;
+}
+
+.foodDetail p{
+  font-size: 0.8em;
+      margin-top: 0.8em;
+}
+/*路线区*/
+.routeDetail{
+  margin: auto 1em;
+}
+.routeDetail p{
+  margin:0em 0.5em 0.5em;
+  font-size: 2.1em;
+}
+
+.routeDetail h2{
+  margin: 0em 0em 0.5em;
+  font-size: 2.7em;
+  font-weight:bold;
+}
+/*地图区*/
+#container {
+  width: 90%; 
+  height: 30em; 
+  border: 0.1em solid #ccc;
+  border-radius: 0.4em;
+  margin-bottom: 6em;
+  margin-left: 0.5em;
+}
+/* 附加导航的 Custom Styles */
+    ul.nav-tabs{
+        /*width: 5em;*/
+        margin-top: 2em;
+        margin-left: 1em;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+    }
+    ul.nav-tabs li{
+        margin: 0;
+        border-top: 1px solid #ddd;
+    }
+    ul.nav-tabs li:first-child{
+        border-top: none;
+    }
+    ul.nav-tabs li a{
+        margin: 0;
+        padding: 8px 16px;
+        border-radius: 0;
+    }
+    ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover{
+        color: #fff;
+        background: #FF9D00;
+        border: 1px solid #FF9D00;
+    }
+    ul.nav-tabs li:first-child a{
+        border-radius: 4px 4px 0 0;
+    }
+    ul.nav-tabs li:last-child a{
+        border-radius: 0 0 4px 4px;
+    }
+    ul.nav-tabs.affix{
+        top: 100px; /* wyy设置距离顶部的高度Set the top position of pinned element */
+    }
+    .mainContent{
+      padding:6.3em 0em;
+    }
+    .addnavigation{
+      margin: 0em auto;
+    }
+    .nav-stacked{
+      /*font-size: 0.6em;*/
+    }
+
+    /*点赞*/
+    a.like {
+        display: inline-block;
+        background: #fafafa url("../img/icon.png") no-repeat scroll -15px -1264px;
+        width: 28px;
+        height: 32px;
+    }
+    #like {
+      /*font-size: 0.8em;*/
+    }
+
+    /*收藏*/
+    .glyphicon{
+    color: #FF9D00;
+    }
+    .glyphicon-heart-empty{
+    color: #FF9D00;
+    }
+    .collect{
+      display: inline-block;
+      position: relative;
+      top: 0.3em;
+      left: 0.3em;
+    }
+
+
+    #button{ 
+      display: inline-block;
+      margin: auto 0em auto 6em;
+    }
+    .button-raised{
+      /*font-size: 1em;*/
+      width: 2em;
+      height: 2em;
+      line-height: 2em;
+   
+    }
+    .button-raised.button-action{
+      font-size: 1.2em;
+    }
+    #collector{
+      cursor: pointer;
+      font-size: 3em;
+      position: relative;
+      top: 0.2em;     
+    }
+
+    p.seperator{
+      font-size: 0.8em;
+      color: #ccc;
+      margin:0 0 0.2em 0.6em;
+    }
+
+@media only screen and (min-width: 500px) {
+
+body{
+   
+    width:480px;
+    height: 800px;
+    position: absolute;
+    left:50%;
+    margin-left: -240px;
+ }
+    
+    .navbar-fixed-top{
+    left: 50%;
+    margin-left: -240px;
+    width:480px;
+}
+}

@@ -1,0 +1,136 @@
+
+  /*主导航css*/
+   
+body{
+    /*font-size: 1em;*/
+    padding: 0px;
+    margin: 0px;
+    font-family: "Microsoft YaHei",Serif;
+    /*width:480px;
+    height: 800px;*/
+    font-size: 62.5%;
+    /*position: absolute;
+    left:50%;
+    margin-left: -240px;*/
+ }
+
+ 
+    ul.nav {
+      line-height: 2em;
+      text-align: center;
+  }
+  .nav-pills>li>a{
+      font-size: 2.5em;
+  }
+  .nav-pills>li+li {
+      margin-left: 0;
+  }
+  .nav-pills>li{
+      width: 33.3%;
+  }
+
+  /*热门推荐副标题*/
+  /*减少了几个横杠*/
+      .subTitle{
+          color:#FF9D00;
+          text-align: center;
+          font-size: 2.1em;
+
+      }
+  .collection{
+      margin:5em auto;
+   }
+  .collectList{
+    margin: 1em 1em 0em;
+  }
+  .pro_col h2{
+    color:#FF9D00;
+    font-size: 3.7em;
+    font-weight:bold;
+    margin: 1em 1em 0em;
+  }
+  .pro_col p{
+    color:rgb(163, 151, 111);
+    text-align: center;
+  }
+  .time_col{
+    float:right;
+    margin: -1.4em 1em -1em auto;
+    font-size: 2.1em;
+  }
+.col-xs-2{
+  font-size: 2.1em;
+  margin: 2.5em auto 0em;
+  padding-right: 0em;
+}
+.col-xs-4{
+  margin: 1.5em auto 0em;
+  padding-right: 0em;
+}
+.attr_col .row{
+  margin: 0em 4.5em;
+}
+
+/*分隔符*/
+p.seperator{
+  font-size: 2.1em;
+  text-align: center;
+  margin-left: 0.5em;
+  /*margin-top: -1.5em;*/
+  color: #ccc;
+}
+
+/*地理位置*/
+.location{
+  margin-top:50px;
+  
+}
+.map {
+  position: relative;
+}
+#container {
+  width:320px; 
+  height: 200px; 
+  margin: 0 auto;
+  border: 0.1em solid #ccc;
+}
+#geolocation{
+  margin-top: 1em;
+  text-align: center;
+font-size: 2em;
+color:#FF9D00;
+font-weight: bold;
+}
+
+/*.detail_pos{
+  position: absolute;
+  top: 0.6em;
+  left: 16em;
+  z-index: 100;
+  background-color: #fff;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 0.4em;
+  border: 0.1em solid #ccc;
+}
+*/
+.attr_item img{
+  border-radius: 0.5em;
+}
+@media only screen and (min-width: 500px) {
+
+body{
+   
+    width:480px;
+    height: 800px;
+    position: absolute;
+    left:50%;
+    margin-left: -240px;
+ }
+    
+    .navbar-fixed-top{
+    left: 50%;
+    margin-left: -240px;
+    width:480px;
+}
+}

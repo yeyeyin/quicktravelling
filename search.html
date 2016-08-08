@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>查询页面</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="css/button.css">
+   <!-- 主页css -->
+    <link rel="stylesheet" type="text/css" href="css/search.css">
+</head>
+
+
+<body>
+
+
+
+<div class="search">
+  <!-- 下面是搜索框的设置 -->
+  <div class="searchAim">
+     <form class="bs-example bs-example-form" role="form">
+        <div class="row right">
+        <button class="btn back" type="button">
+           <<
+        </button>
+           <div class="col-lg-8">
+              <div class="input-group">
+                 <input type="text" class="form-control searchInput" placeholder="搜索你想要的目的地或省份">
+                 <span class="input-group-btn">
+                    <button id="btn" class="btn" type="button">
+                       Go!
+                    </button>
+                    
+                 </span>
+              </div><!-- /input-group -->
+           </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+     </form>
+  </div>
+
+<!-- 点击下面文字可以直接跳转到详情页面，点击上面搜索将会在下面的区域写入主页瀑布流样式的搜索项匹配的东西，此时allLocation会隐藏 -->
+<div class="locationAll">
+  <div class="subTitle">
+    <p>————————· 国内热门地 ·————————</p>
+  </div>
+  <div class="searchList">
+    <!-- 省份 -->
+    <div class="pro_search">
+      <h2>云南</h2>
+    </div>
+    <!-- 具体目的地 -->
+    <div class="attr_search">
+      
+        <div class="row">
+          <a href="details.html?id=1" class="attr_item">
+            <div class="col-xs-3">
+              <p>大理</p>
+            </div>
+          </a>
+          <a href="#" class="attr_item">
+            <div class="col-xs-3">
+              <p>丽江</p>
+            </div>
+          </a>
+          <a href="#" class="attr_item">
+            <div class="col-xs-3">
+              <p>香格里拉</p>
+            </div>
+          </a>
+          <a href="#" class="attr_item">
+            <div class="col-xs-3">
+              <p>昆明</p>
+            </div>
+          </a>
+        </div>
+        <div class="row">
+          <a href="#" class="attr_item">
+            <div class="col-xs-3">
+              <p>西双版纳</p>
+            </div>
+          </a>
+          <a href="#" class="attr_item">
+            <div class="col-xs-3">
+              <p>红河</p>
+            </div>
+          </a>
+          <a href="#" class="attr_item">
+            <div class="col-xs-3">
+              <p>玉溪</p>
+            </div>
+          </a>
+        </div>
+    </div>
+  </div>
+  <div class="searchList">
+    <!-- 省份 -->
+    <div class="pro_search">
+      <h2>西藏</h2>
+    </div>
+    <!-- 具体目的地 -->
+    <div class="attr_search">
+      
+        <div class="row">
+          <a href="details.html?id=10" class="attr_item">
+            <div class="col-xs-3">
+              <p>拉萨</p>
+            </div>
+          </a>
+          <a href="#" class="attr_item">
+            <div class="col-xs-3">
+              <p>林芝</p>
+            </div>
+          </a>
+          <a href="#" class="attr_item">
+            <div class="col-xs-3">
+              <p>日喀则</p>
+            </div>
+          </a>
+          <a href="#" class="attr_item">
+            <div class="col-xs-3">
+              <p>阿里</p>
+            </div>
+          </a>
+        </div>
+        <div class="row">
+          <a href="#" class="attr_item">
+            <div class="col-xs-3">
+              <p>那曲</p>
+            </div>
+          </a>
+        </div>
+    </div>
+  </div>
+  <div class="searchList">
+    <!-- 省份 -->
+    <div class="pro_search">
+      <h2>陕西</h2>
+    </div>
+    <!-- 具体目的地 -->
+    <div class="attr_search">
+      
+        <div class="row">
+          <a href="#" class="attr_item">
+            <div class="col-xs-3">
+              <p>西安</p>
+            </div>
+          </a>
+          <a href="#" class="attr_item">
+            <div class="col-xs-3">
+              <p>延安</p>
+            </div>
+          </a>
+          <a href="#" class="attr_item">
+            <div class="col-xs-3">
+              <p>宝鸡</p>
+            </div>
+          </a>
+          <a href="#" class="attr_item">
+            <div class="col-xs-3">
+              <p>咸阳</p>
+            </div>
+          </a>
+        </div>
+        <div class="row">
+          <a href="#" class="attr_item">
+            <div class="col-xs-3">
+              <p>临潼</p>
+            </div>
+          </a>
+          <a href="#" class="attr_item">
+            <div class="col-xs-3">
+              <p>汉中</p>
+            </div>
+          </a>
+          <a href="#" class="attr_item">
+            <div class="col-xs-3">
+              <p>渭南</p>
+            </div>
+          </a>
+        </div>
+    </div>
+  </div>
+  
+  <div class="searchList">
+    <!-- 省份 -->
+    <div class="pro_search">
+      <h2>甘肃</h2>
+    </div>
+    <!-- 具体目的地 -->
+    <div class="attr_search">     
+        <div class="row">
+          <a href="#" class="attr_item">
+            <div class="col-xs-3">
+              <p>敦煌</p>
+            </div>
+          </a>
+        </div>
+    </div>
+  </div>
+  <div class="searchList">
+    <!-- 省份 -->
+    <div class="pro_search">
+      <h2>青海</h2>
+    </div>
+    <!-- 具体目的地 -->
+    <div class="attr_search">     
+        <div class="row">
+          <a href="#" class="attr_item">
+            <div class="col-xs-3">
+              <p>青海湖</p>
+            </div>
+          </a>
+          <a href="#" class="attr_item">
+            <div class="col-xs-3">
+              <p>西宁</p>
+            </div>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+</div>
+
+<!-- 加上hide就会隐藏 -->
+<div class="searchResult hide">
+  <!-- <div class="row">
+    <a href="#" class="attr_item">
+      <div class="col-xs-8">
+        <img src="imgs_detail/dali.png" width="100%" />
+      </div>
+      <div class="col-xs-4">
+        <p>大理</p>
+      </div>
+    </a>
+  </div> -->
+</div>
+
+
+</div>
+<script src="js/jquery-2.0.3.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  $("document").ready(function() {
+    // $('.searchList').addClass('hide');
+    $('.back').click(function(){
+      window.location = "index.html";
+    });
+    var res_search;
+
+    var searchLocation = function(){
+      $('.searchResult').empty();
+        res_search = $('.form-control').val();
+
+      if(res_search == ''){
+        alert("请输入相关目的地");
+        return false;
+      }
+
+      var url = "php/search.php?keywords="+res_search;//字符串拼接
+      var data = {}; 
+      $.get(url, data, function(res){
+        $('.searchList').addClass('hide');
+        $('.searchResult').removeClass('hide');
+        var jsonObj = jQuery.parseJSON(res);
+        var len = jsonObj.len_search;
+        if( len == 0){
+          $('.searchResult').append('<div class="nullResult"><p>未找到相关目的地</p></div>');
+        }else{
+          
+          // 将搜索结果加入到页面中，但当重新搜索时，需要清除原搜索结果
+            for(var i=1; i<=len; i++){
+            $('.searchResult').append(
+              '<div class="row"><a href="details.html?id='+jsonObj[i]['id']+'" class="attr_item"><div class="col-xs-8"><img src="'+jsonObj[i]['imgs']+'" width="100%" /></div><div class="col-xs-4"><p>'+jsonObj[i]['location']+'</p></div></a></div>'
+            );
+            }
+        }
+      });
+    }
+
+    $('#btn').on('click',searchLocation);
+/*here!!!*/
+    $('.searchInput').keypress(function(){
+      if (event.keyCode == 13){
+
+        //searchLocation();
+        $('#btn').click();
+      }
+    });
+
+  });
+
+</script>
+
+</body>
+</html>

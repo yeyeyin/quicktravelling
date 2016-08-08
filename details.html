@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>目的地详情</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+   <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
+   <!-- button的css -->
+   <link rel="stylesheet" type="text/css" href="css/button.css"> 
+      <!-- 详情页面css -->
+   <link rel="stylesheet" type="text/css" href="css/details.css">
+   <link href="http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+
+<body data-spy="scroll" data-target="#myScrollspy">
+ <!-- 通过 data 属性或者通过 JavaScript 来使用附加导航（Affix）插件。 -->
+
+<!-- 导航栏 -->
+<!-- 下面是胶囊导航栏的设置 -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<ul class="nav nav-pills">
+   <li><a href="index.html">首页</a></li>
+   <li class="active"><a href="search.html">目的地</a></li>
+   <li><a href="collection.html">我的</a></li>
+</ul>
+</nav>
+
+<!-- 内容区 ：abstract+strategy+addnavigation-->
+
+<!-- 简介 -->
+<div class="abstractContent">
+  <div class="abstract"> 
+    <div class="row">
+      <!-- 图片 -->
+      <div class="col-xs-3" id="img_detail">
+        <!-- 添加图片 -->
+      </div>
+      <!-- 文字介绍 -->
+      <div class="col-xs-8">
+        <h1 id="name">   <!-- 此处插入location -->   </h1>
+          
+          <div id="button" >
+          <button class="button button-raised button-action button-circle "><i class="fa fa-thumbs-up"></i></button>
+          <span id="like"></span>
+          <div class="collect">
+            <span class="glyphicon glyphicon-heart-empty" id="collector"></span> 
+            <span id="collect">收藏</span>
+          </div>
+          </div>
+
+          <!-- glyphicon-heart -->
+        <div id="introDetail">
+        <!-- 此处插入简介内容introduction -->
+        </div>
+      </div>
+    </div>  
+  </div>
+
+
+ <!-- 下面是附加导航的设置 -->
+      <div class="addnavigation">
+        
+        <div class="row">
+            <div class="col-xs-3" id="myScrollspy">
+                 <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="135">
+                     <li class="active"><a href="#section-1">景点推荐</a></li>
+                     <li><a href="#section-2">美食推荐</a></li>
+                     <li><a href="#section-3">路线推荐</a></li>
+                     <li><a href="#section-4">城市地图</a></li>
+                 </ul>
+            </div>
+
+            <div class="col-xs-9" id="details">
+              <h2 id="section-1">景点推荐</h2>
+                  <!-- 下面的一个div块可以作为一个模块重复用 -->
+                  <!-- <div class="attrDetail row" > -->
+                    <!-- 一行里有图片和文字两列 -->
+                      <!-- <div class="col-xs-4 img_attr"> -->
+                        <!-- <img src="imgs_detail/dali.png" style="width:100%"/> -->
+                        <!-- 此处插入图片 -->
+                      <!-- </div> -->
+                      <!-- <div class="col-xs-8 text_attr"> -->
+                        <!-- 此处插入attraction 文本 -->
+                      <!-- </div> -->
+                  <!-- </div> -->
+
+
+                <h2 id="section-2">美食推荐</h2>
+                     <!-- <div class="foodDetail row" > -->
+                       <!-- 一行里有3个图片,并排显示，文字在每一个图片下方 ，如果大于三个，换行-->
+                         <!-- <div class="col-xs-4"> -->
+                           <!-- <img src="imgs_detail/dali.png" style="width:100%"/> -->
+                           <!-- <p>大理酸辣鱼</p> -->
+                         <!-- </div> -->
+
+                     
+                 
+                <h2 id="section-3">路线推荐</h2>
+                      <div class="routeDetail">
+                          <!-- 此处插入routes -->                    
+                      </div>
+
+                      <div class="tipsDetail">     
+                      </div>
+                <h2 id="section-4">城市地图</h2>
+                      <div class="mapDetail" id="container">
+                      <!-- 此处加入景点地图     -->
+                      </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+</div>
+
+<script src="js/jquery-2.0.3.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<!-- 轮播图js -->
+<script type="text/javascript" src="js/detail.js"></script>
+<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=6719b1fb7ac6cb39e6cf7bf36fa069bb"></script>
+
+<!-- 高德地图script -->
+<script type="text/javascript">
+    $("document").ready(function() {
+       
+      var searchId = window.location.search,
+          id=searchId.split('=')[1]; //获取id值
+
+      // 地图显示
+      var location = function(id) {
+          var location_data = {
+              "1":{addr:["大理","洱海","大理古城","双廊"], position:[[100.2297690606,25.5916113044],[100.2657371097,25.6431010262],[100.1638489302,25.6876307599],[100.1938580712,25.9101073410]]},
+              "10":{addr:["拉萨","布达拉宫","纳木错","大昭寺"], position:[[91.1145542511, 29.6441441263],[91.1184027836,29.6552938754],[90.8720173535,30.7729895516],[91.1338172257,29.6503317869]]}
+          };
+
+          var map = new AMap.Map('container',{
+                zoom: 10,
+                center: location_data[id]['position'][0],
+          });
+        
+          AMap.plugin(['AMap.ToolBar','AMap.Scale'],function(){
+              var toolBar = new AMap.ToolBar();
+              var scale = new AMap.Scale();
+              map.addControl(toolBar);
+              map.addControl(scale);
+          });
+          var infoWindow = new AMap.InfoWindow(),marker;
+          $.each(location_data[id]['position'],function(i,val){
+              marker = new AMap.Marker({
+                  position:val,
+                  map:map,
+                  icon: 'http://webapi.amap.com/theme/v1.3/markers/n/mark_b'+(1+i)+'.png',
+              });
+              marker.content='<div>'+location_data[id]['addr'][i]+'</div>';
+              marker.on('click', markerClick);
+          });
+          map.setFitView();
+          function markerClick(e){
+              infoWindow.setContent(e.target.content);
+              infoWindow.open(map, e.target.getPosition());
+          }
+      }
+      location(id);
+    });
+ 
+</script>
+
+
+
+</body>
+</html>

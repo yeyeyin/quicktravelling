@@ -1,0 +1,192 @@
+ /*主导航css*/
+
+
+
+body{
+    /*font-size: 1em;*/
+    padding: 0px;
+    margin: 0px;
+    font-family: "Microsoft YaHei",Serif;
+    /*width:480px;
+    height: 800px;*/
+    font-size: 62.5%;
+    /*position: absolute;
+    left:50%;
+    margin-left: -240px;*/
+ }
+
+ img{
+    border-radius: 0.4em;
+ }
+/*.navbar,.nav,{
+    height: 4em;
+}
+.nav a{
+    height: 2.2em;
+    line-height: 0.6em;
+}*/
+
+
+
+ul.nav {
+    line-height: 2em;
+    text-align: center;
+}
+.nav-pills>li>a{
+    font-size: 2.5em;
+}
+.nav-pills>li+li {
+    margin-left: 0;
+}
+
+.mainContent{
+    margin: 3.6em 0em;
+}
+.nav-pills>li{
+    width: 33.3%;
+}
+
+/*轮播*/
+
+.scollCont {
+    margin:0px auto 0px;
+}
+
+/*搜索框*/
+    div.searchAim{
+        padding: 0.5em 0.5em;
+        margin: auto 0em auto 9em;
+    }
+
+
+/*热门推荐副标题*/
+/*减少了几个横杠*/
+    .subTitle{
+        color:#FF9D00;
+        text-align: center;
+        font-size: 2.1em;
+    }
+
+
+/*热门推荐区域*/
+    .first{
+        /*font-size: 2em;*/
+        font-weight: bold;
+    }
+    .rankfirst{       
+        font-weight: bold;
+    }
+
+    .hotRecommend{
+        margin: auto;
+        padding: 0;
+        font-size: 2.1em;
+    }
+    .suojin{
+       padding: 1em 0em;
+    }
+    .col-xs-4{
+       margin: 5em auto;
+       text-align: center; 
+    }
+    .col-xs-6 p{
+        font-size: 1em;
+    }
+    .hotRecommend h2{
+        margin-top: 0em;
+    }
+
+
+    /*排行榜*/
+
+    #rank{
+        /*font-size: 2em;*/
+        padding-right: 0;
+    }
+
+#rank .list-group-item{
+        padding: 0.2em 0.7em;
+}
+#rank > .active{
+    padding: 0.5em;
+}
+
+#waterfall > .active{
+    padding: 0.5em;
+}
+.hotRecommend > .row{
+    margin: 1em auto;
+ }
+
+ .like_nums{
+    float:right;
+ }
+ 
+
+ p.seperator{
+  font-size: 1.2em;
+  margin-top: 0.2em;
+  margin-bottom: -1em;
+  color: #ccc;
+}
+
+
+/*toTop*/
+.cd-top {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 40px;
+  left: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: #FF9D00 url(../img/cd-top-arrow.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  opacity: .5;
+}
+.no-touch .cd-top:hover {
+  background-color: #e86256;
+  opacity: 1;
+}
+
+
+
+
+ 
+@media only screen and (min-width: 500px) {
+
+body{
+   
+    width:480px;
+    height: 800px;
+    position: absolute;
+    left:50%;
+    margin-left: -240px;
+ }
+    
+    .navbar-fixed-top{
+    left: 50%;
+    margin-left: -240px;
+    width:480px;
+}
+.cd-top{
+    left: 50%;
+    margin-left: -240px;
+}
+    
+}

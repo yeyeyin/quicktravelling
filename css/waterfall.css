@@ -1,0 +1,6 @@
+ul{
+    list-style: none;
+}
+#waterfall ul{
+    display: inline-block;
+}

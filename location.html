@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Geolocation例子</title>
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script type="text/javascript" charset="utf-8">
+//等待PhoneGap加载
+document.addEventListener("deviceready", onDeviceReady, false);
+varwatchID = null;
+//加载完成
+function onDeviceReady() {
+// update every 3 seconds
+var options = { frequency: 3000 };
+watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
+}
+// onSuccess回调函数
+// 接收包含当前地理位置坐标信息的Position对象
+function onSuccess(position) {
+var element = document.getElementById('geolocation');
+element.innerHTML = '纬度: ' + position.coords.latitude + '<br />' +
+'经度: ' + position.coords.longitude + '<br />' +
+'<hr />' + element.innerHTML;
+}
+//取消获取地理位置信息
+function clearWatch() {
+
+
+
+
+ if (watchID != null) {
+navigator.geolocation.clearWatch(watchID);
+watchID = null;
+}
+}
+// onError回调函数，接收包含具体错误信息的PositionError对象
+function onError(error) {
+alert('code: ' + error.code + '\n' +
+'message: ' + error.message + '\n');
+}
+</script>
+</head>
+<body>
+<p id="geolocation">监测地理位置信息中。。。</p>
+<button"clearWatch();">取消监测地理位置信息</button>
+</body>
+</html>
